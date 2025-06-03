@@ -6,7 +6,6 @@ on:
      - main
     paths:
       - '**'
-      - '!.github/workflows/**'
       - '!renovate.json'
 
 jobs:
@@ -27,7 +26,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: antlac1/antlac1/n8n-ffmpeg
+          images: antlac1/n8n-ffmpeg
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
@@ -36,5 +35,5 @@ jobs:
           file: ./Dockerfile
           push: true
           platforms: linux/amd64
-          tags: antlac1/antlac1/n8n-ffmpeg:latest
+          tags: antlac1/n8n-ffmpeg:latest
           labels: ${{ steps.meta.outputs.labels }}
