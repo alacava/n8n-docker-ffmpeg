@@ -1,5 +1,5 @@
 # Use the official n8n image from n8n.io as the base
-FROM docker.n8n.io/n8nio/n8n
+FROM docker.n8n.io/n8nio/n8n:1.95.3
 
 # Switch to root to install packages
 USER root
@@ -12,3 +12,4 @@ RUN addgroup -S docker || true
 RUN addgroup node docker
 
 # Switch back to the default user 'node'
+USER node
