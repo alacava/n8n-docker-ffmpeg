@@ -1,5 +1,5 @@
 # Use the official n8n image from n8n.io as the base
-FROM docker.n8n.io/n8nio/n8n:1.95.3
+FROM docker.n8n.io/n8nio/n8n:1.99.1
 
 # Switch to root to install packages
 USER root
